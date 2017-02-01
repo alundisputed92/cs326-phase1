@@ -2,6 +2,9 @@ package OperandStack;
 import Value.*;
 import java.io.*;
 import Utilities.Error;
+import java.util.*;
+
+
 /**
  * A stack for doing arithmetic and logic operations. Stack elements are of type {@link Value}.
  * @author   Matt B. Pedersen
@@ -19,7 +22,7 @@ public class OperandStack {
      */
     // Hint, if you don't make it an array the toString() method wont work as it is ;-)
     // YOUR CODE HERE
-	private int[] stack;
+	private Value[] stack;
     /**
      * The stack pointer. The stack pointer always points to the next free location in the <a href="#stack">stack<a> array.
      */
@@ -46,7 +49,8 @@ public class OperandStack {
 	this.name = name;
 	stackNumber = stackNo;
 	stackNo++;
-	this.stack = new int[size];
+	this.stack = new Value[size];
+	sp = 0;
 	
 
 	// YOUR CODE HERE
@@ -64,7 +68,14 @@ public class OperandStack {
      */
     public void push(Value e) {
 	// YOUR CODE HERE
-    }
+/* 	if () { //no room available
+		//do something
+	} */
+
+	sp++;
+	stack[0] = e;
+	System.out.println("Pushed " + stack[0]);
+	    }
 
     /**
      * Pops one element of type {@link Value} off the operand stack and decrements the stack pointer (sp) by one.
@@ -79,6 +90,11 @@ public class OperandStack {
      */
     public Value pop() {
 	// YOUR CODE HERE
+	if (sp == 0) {
+		//error
+	}
+	sp--;
+	return stack[sp];
     }
     
     /** 
@@ -90,6 +106,7 @@ public class OperandStack {
      */
     public Value peek(int n) {
 	// YOUR CODE HERE
+	return stack[n];
     }
 	    
     /**

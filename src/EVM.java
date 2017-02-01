@@ -35,8 +35,8 @@ public class EVM {
       System.out.println(operandStack.pop()); // ===> Hello
       System.out.println(operandStack.pop()); // ===> true
       System.out.println(operandStack.pop()); // ===> 100
-      System.out.println(operandStack.pop()); // ===> Error message & program termination
-      System.out.println("This line should never be printed out");
+      /* System.out.println(operandStack.pop()); // ===> Error message & program termination
+      System.out.println("This line should never be printed out"); */
 
       // Remove the code above and replace it by your own tests from the assignment
 
