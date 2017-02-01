@@ -30,8 +30,8 @@ public class EVM {
       v4 = (IntegerValue)v2;
       v3 = (IntegerValue)v1;
       
-  /*     operandStack.push(new IntegerValue(v3.getValue() + v4.getValue()));
-      System.out.println(operandStack.pop()); // ===> 11 */
+      operandStack.push(new IntegerValue(v3.getValue() + v4.getValue()));
+      System.out.println(operandStack.pop()); // ===> 11
       System.out.println("popping: " + operandStack.pop()); // ===> Hello
       System.out.println("popping: " + operandStack.pop()); // ===> true
       System.out.println("popping: " + operandStack.pop()); // ===> 100
