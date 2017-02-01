@@ -19,12 +19,12 @@ public class OperandStack {
      */
     // Hint, if you don't make it an array the toString() method wont work as it is ;-)
     // YOUR CODE HERE
-	private int[] stack;
+    private int[] opStack;
     /**
      * The stack pointer. The stack pointer always points to the next free location in the <a href="#stack">stack<a> array.
      */
     // YOUR CODE HERE
-	private int sp;
+   
     /**
      * Just a name to give to the stack - helps with debugging later.
      */
@@ -38,7 +38,6 @@ public class OperandStack {
     /**
      * Creates a new operand stack of size <b>size</b> and sets the stack pointer to 0.
      * @param size The size of the newly created operand stack.
-	 * @param name The name of the stack
      * @see #stack
      * @see #sp 
      */
@@ -46,8 +45,6 @@ public class OperandStack {
 	this.name = name;
 	stackNumber = stackNo;
 	stackNo++;
-	this.stack = new int[size];
-	
 
 	// YOUR CODE HERE
     }

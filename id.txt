@@ -5,5 +5,7 @@ are two put both of the group member's info.
 Only one of you has to hand in the assignment
 on csgfms.cs.unlv.edu
 
-Name                    Student ID              e-mail
-----------------------------------------------------------------------
+Name Jack Phelan      Student ID 2000419214      e-mail phelanj@unlv.nevada.edu
+Name Alex Williams    Student ID 2000012402      e-mail will1420@unlv.nevada.edu
+-----------------------------------------------------------------------------------
+
