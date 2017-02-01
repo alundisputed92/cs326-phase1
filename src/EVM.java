@@ -13,8 +13,8 @@ public class EVM {
       operandStack.push(Value.makeDefaultValueFromSignature("Z"));
       operandStack.push(Value.makeValue("Hello"));
 
-      System.out.println(operandStack.peek(1));
-      System.out.println(operandStack.peek(2));
+      System.out.println("peeking: " +operandStack.peek(1)); //==> Hello
+      System.out.println("peeking: " +operandStack.peek(2)); //==> 1
         
       // if we have an expression line 1 + 2 we can translate that into postfix 
       // like this: 1 2 +
@@ -30,11 +30,11 @@ public class EVM {
       v4 = (IntegerValue)v2;
       v3 = (IntegerValue)v1;
       
-      operandStack.push(new IntegerValue(v3.getValue() + v4.getValue()));
-      System.out.println(operandStack.pop()); // ===> 11
-      System.out.println(operandStack.pop()); // ===> Hello
-      System.out.println(operandStack.pop()); // ===> true
-      System.out.println(operandStack.pop()); // ===> 100
+  /*     operandStack.push(new IntegerValue(v3.getValue() + v4.getValue()));
+      System.out.println(operandStack.pop()); // ===> 11 */
+      System.out.println("popping: " + operandStack.pop()); // ===> Hello
+      System.out.println("popping: " + operandStack.pop()); // ===> true
+      System.out.println("popping: " + operandStack.pop()); // ===> 100
       /* System.out.println(operandStack.pop()); // ===> Error message & program termination
       System.out.println("This line should never be printed out"); */
 

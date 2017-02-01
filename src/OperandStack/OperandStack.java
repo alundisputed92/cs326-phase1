@@ -72,9 +72,9 @@ public class OperandStack {
 		//do something
 	} */
 
+	stack[sp] = e;
 	sp++;
-	stack[0] = e;
-	System.out.println("Pushed " + stack[0]);
+	/* System.out.println("Pushed " + stack[0]); */
 	    }
 
     /**
@@ -92,6 +92,7 @@ public class OperandStack {
 	// YOUR CODE HERE
 	if (sp == 0) {
 		//error
+			System.out.println("Error: sp = 0 \n");
 	}
 	sp--;
 	return stack[sp];
@@ -106,7 +107,9 @@ public class OperandStack {
      */
     public Value peek(int n) {
 	// YOUR CODE HERE
-	return stack[n];
+	/* System.out.println("sp = " + sp + "\n"); */
+	/* System.out.println("stack [0] = " + stack[0]); */
+	return stack[sp - n];
     }
 	    
     /**
