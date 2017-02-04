@@ -18,6 +18,9 @@ public class EVM {
 	  operandStack.push(new IntegerValue(2));
 	  operandStack.push(Value.makeValue("/"));
 	  operandStack.push(Value.makeValue("-"));
+	  
+	  v2 = operandStack.pop();
+      v1 = operandStack.pop();
 
   }
 
